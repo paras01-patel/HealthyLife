@@ -1,0 +1,130 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}Recipes - आरोग्य आहार{% endblock %}
+
+{% block css %}
+<style>
+
+.page-title {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.page-title h1 {
+    color: #1b5e20;
+    font-size: 32px;
+}
+
+.recipe-grid {
+    width: 95%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+.recipe-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.recipe-card:hover {
+    transform: translateY(-6px);
+}
+
+.recipe-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.recipe-info {
+    padding: 15px;
+    text-align: center;
+}
+
+.recipe-info h3 {
+    font-size: 16px;
+    color: #2e7d32;
+    margin-bottom: 8px;
+}
+
+.recipe-info p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+.calorie {
+    font-weight: bold;
+    color: #1b5e20;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<div class="page-title">
+    <h1>Healthy Recipes Collection 🥗</h1>
+</div>
+
+<div class="recipe-grid">
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg"><div class="recipe-info"><h3>Green Detox Salad</h3><p>Fiber rich vegetables for detox and digestion.</p><div class="calorie">Calories: 150 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1092730/pexels-photo-1092730.jpeg"><div class="recipe-info"><h3>Fruit Energy Bowl</h3><p>Natural vitamins and refreshing taste.</p><div class="calorie">Calories: 220 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/70497/pexels-photo-70497.jpeg"><div class="recipe-info"><h3>High Protein Meal</h3><p>Perfect for muscle strength and stamina.</p><div class="calorie">Calories: 350 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/216951/pexels-photo-216951.jpeg"><div class="recipe-info"><h3>Oats Breakfast</h3><p>Whole grains for energetic mornings.</p><div class="calorie">Calories: 180 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/775032/pexels-photo-775032.jpeg"><div class="recipe-info"><h3>Berry Smoothie</h3><p>Antioxidant rich refreshing drink.</p><div class="calorie">Calories: 160 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/566566/pexels-photo-566566.jpeg"><div class="recipe-info"><h3>Avocado Toast</h3><p>Healthy fats and fiber rich snack.</p><div class="calorie">Calories: 210 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1640774/pexels-photo-1640774.jpeg"><div class="recipe-info"><h3>Quinoa Bowl</h3><p>Protein packed superfood meal.</p><div class="calorie">Calories: 320 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/461198/pexels-photo-461198.jpeg"><div class="recipe-info"><h3>Dal & Brown Rice</h3><p>Traditional healthy Indian combo.</p><div class="calorie">Calories: 400 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg"><div class="recipe-info"><h3>Veg Clear Soup</h3><p>Light and nutritious evening meal.</p><div class="calorie">Calories: 120 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1435904/pexels-photo-1435904.jpeg"><div class="recipe-info"><h3>Paneer Salad</h3><p>Protein rich vegetarian option.</p><div class="calorie">Calories: 280 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/4110003/pexels-photo-4110003.jpeg"><div class="recipe-info"><h3>Chia Pudding</h3><p>Omega-3 rich superfood dessert.</p><div class="calorie">Calories: 190 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg"><div class="recipe-info"><h3>Sprouts Salad</h3><p>Immunity boosting protein snack.</p><div class="calorie">Calories: 170 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/616354/pexels-photo-616354.jpeg"><div class="recipe-info"><h3>Grilled Chicken</h3><p>Lean protein for muscle growth.</p><div class="calorie">Calories: 330 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/4611985/pexels-photo-4611985.jpeg"><div class="recipe-info"><h3>Veg Wrap</h3><p>Healthy whole wheat snack.</p><div class="calorie">Calories: 250 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/7625056/pexels-photo-7625056.jpeg"><div class="recipe-info"><h3>Idli Sambar</h3><p>South Indian light nutritious meal.</p><div class="calorie">Calories: 300 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/5560763/pexels-photo-5560763.jpeg"><div class="recipe-info"><h3>Vegetable Poha</h3><p>Light breakfast with peanuts & veggies.</p><div class="calorie">Calories: 260 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/53148/egg-boiled-food-protein-53148.jpeg"><div class="recipe-info"><h3>Boiled Eggs</h3><p>Simple and powerful protein source.</p><div class="calorie">Calories: 140 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/725991/pexels-photo-725991.jpeg"><div class="recipe-info"><h3>Grilled Salmon</h3><p>Rich in omega-3 fatty acids.</p><div class="calorie">Calories: 360 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/958545/pexels-photo-958545.jpeg"><div class="recipe-info"><h3>Healthy Veg Thali</h3><p>Balanced Indian traditional meal.</p><div class="calorie">Calories: 450 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1435735/pexels-photo-1435735.jpeg"><div class="recipe-info"><h3>Detox Juice</h3><p>Cleanse your body naturally.</p><div class="calorie">Calories: 110 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/704569/pexels-photo-704569.jpeg"><div class="recipe-info"><h3>Peanut Butter Toast</h3><p>Healthy fats and protein snack.</p><div class="calorie">Calories: 240 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1640773/pexels-photo-1640773.jpeg"><div class="recipe-info"><h3>Brown Rice Bowl</h3><p>Whole grain fiber rich meal.</p><div class="calorie">Calories: 300 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg"><div class="recipe-info"><h3>Multigrain Paratha</h3><p>Healthy Indian breakfast option.</p><div class="calorie">Calories: 320 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1099680/pexels-photo-1099680.jpeg"><div class="recipe-info"><h3>Greek Yogurt Bowl</h3><p>Probiotic rich creamy delight.</p><div class="calorie">Calories: 200 kcal</div></div></div>
+
+<div class="recipe-card"><img src="https://images.pexels.com/photos/1295572/pexels-photo-1295572.jpeg"><div class="recipe-info"><h3>Mixed Nuts Snack</h3><p>Healthy fats for heart health.</p><div class="calorie">Calories: 180 kcal</div></div></div>
+
+</div>
+
+{% endblock %}

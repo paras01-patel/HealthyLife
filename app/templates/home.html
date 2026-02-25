@@ -1,0 +1,204 @@
+{% extends "base.html" %}
+
+{% block title %}Home - आरोग्य आहार{% endblock %}
+
+{% block css %}
+<style>
+
+/* ===== HERO SECTION ===== */
+.hero {
+    background: linear-gradient(rgba(27,94,32,0.8), rgba(46,125,50,0.8)),
+                url('https://images.unsplash.com/photo-1490645935967-10de6ba17061');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.hero a {
+    background: white;
+    color: #1b5e20;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.hero a:hover {
+    background: #c8e6c9;
+}
+
+/* ===== FEATURES SECTION ===== */
+.features {
+    display: flex;
+    justify-content: space-around;
+    margin: 60px 0;
+    flex-wrap: wrap;
+}
+
+.feature-box {
+    width: 280px;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+}
+
+.feature-box h3 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+/* ===== FOOD CARDS ===== */
+.food-section {
+    text-align: center;
+}
+
+.food-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.food-card {
+    width: 280px;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    margin-bottom: 30px;
+}
+
+.food-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.food-card .info {
+    padding: 20px;
+}
+
+.food-card h4 {
+    color: #2e7d32;
+    margin-bottom: 10px;
+}
+
+/* ===== CTA SECTION ===== */
+.cta {
+    background: #2e7d32;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 10px;
+}
+
+.cta a {
+    display: inline-block;   /* important */
+    background: white;
+    color: #1b5e20;
+    padding: 12px 40px;   /* 150px bahut zyada tha */
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    margin-top: 25px;
+}
+
+.cta h2 {
+    margin-bottom: 10px;
+}
+
+.cta p {
+    margin-bottom: 20px;
+}
+
+</style>
+{% endblock %}
+
+{% block content %}
+
+<!-- HERO -->
+<div class="hero">
+    <h1>स्वस्थ भोजन, स्वस्थ जीवन</h1>
+    <p>Discover nutritious recipes and build a healthier lifestyle today.</p>
+    <a href="{% url 'recipes' %}">Explore Recipes</a>
+</div>
+
+<!-- FEATURES -->
+<div class="features">
+    <div class="feature-box">
+        <h3>🥗 Healthy Recipes</h3>
+        <p>Balanced meals with proper nutrition and calorie tracking.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>📊 BMI Calculator</h3>
+        <p>Check your health status instantly with our BMI tool.</p>
+    </div>
+
+    <div class="feature-box">
+        <h3>💚 Lifestyle Tips</h3>
+        <p>Daily habits and food suggestions for better living.</p>
+    </div>
+</div>
+
+<!-- FOOD SECTION -->
+<div class="food-section">
+    <h2>Popular Healthy Foods</h2>
+
+    <div class="food-grid">
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1546069901-eacef0df6022">
+            <div class="info">
+                <h4>Green Salad</h4>
+                <p>Low calorie, high fiber nutritious meal.</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd">
+            <div class="info">
+                <h4>Fruit Bowl</h4>
+                <p>Rich in vitamins and natural energy booster.</p>
+            </div>
+        </div>
+
+        <div class="food-card">
+            <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836">
+            <div class="info">
+                <h4>Protein Meal</h4>
+                <p>Perfect for muscle growth and strength.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- CTA -->
+<div class="cta">
+    <h2>Start Your Healthy Journey Today 🌿</h2>
+    <p>Join us and transform your lifestyle.</p>
+    <a href="/register/">Get Started</a>
+</div>
+
+{% endblock %}
