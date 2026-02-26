@@ -24,3 +24,7 @@ def contact(req):
         
         
     return render(req,'contact.html')
+
+
+def adminpanel(req):
+    return render(req,'adminpanel.html')

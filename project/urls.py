@@ -25,6 +25,11 @@ urlpatterns = [
     path('bmi/',views.bmi,name='bmi'),
     path('contact/',views.contact,name='contact'),
     
+    # adminpanel
+    
+    path('adminpanel/',views.adminpanel,name='adminpanel'),
+    
+    
     
     
 ]
