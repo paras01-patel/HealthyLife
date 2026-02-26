@@ -22,5 +22,9 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.home,name='home'),
     path('recipes/',views.recipes,name='recipes'),
+    path('bmi/',views.bmi,name='bmi'),
+    path('contact/',views.contact,name='contact'),
+    
+    
     
 ]

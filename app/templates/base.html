@@ -150,8 +150,8 @@ body {
     <div class="nav-links">
         <a href="/">Home</a>
         <a href="{% url 'recipes' %}">Recipes</a>
-        <a href="/bmi/">BMI Calculator</a>
-        <a href="/contact/">Contact</a>
+        <a href="{% url 'bmi' %}">BMI Calculator</a>
+        <a href="{% url 'contact' %}">Contact</a>
 
         {% comment %} {% if user.is_authenticated %}
             <a href="/logout/">Logout</a>
@@ -189,8 +189,8 @@ body {
             <ul>
                 <li><a href="/">Home</a></li>
                 <li><a href="{% url 'recipes' %}">Recipes</a></li>
-                <li><a href="/bmi/">BMI Calculator</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                <li><a href="{% url 'bmi' %}">BMI Calculator</a></li>
+                <li><a href="{% url 'contact' %}">Contact</a></li>
             </ul>
         </div>
 

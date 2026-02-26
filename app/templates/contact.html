@@ -1,0 +1,193 @@
+{% extends "base.html" %}
+
+{% block title %}Contact | आरोग्य आहार{% endblock %}
+
+{% block css %}
+<style>
+
+/* ===== HERO SECTION ===== */
+.contact-hero {
+    background: linear-gradient(120deg, #1b5e20, #43a047);
+    color: white;
+    padding: 70px 40px;
+    border-radius: 18px;
+    text-align: center;
+    margin-bottom: 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.contact-hero h2 {
+    font-size: 38px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+}
+
+.contact-hero p {
+    max-width: 750px;
+    margin: auto;
+    font-size: 16px;
+    opacity: 0.95;
+}
+
+/* ===== MAIN SECTION ===== */
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+/* ===== LEFT INFO PANEL ===== */
+.contact-info {
+    flex: 1;
+    min-width: 320px;
+}
+
+.info-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+    transition: 0.3s;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+    color: #1b5e20;
+}
+
+.info-card p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ===== FORM PANEL ===== */
+.contact-form {
+    flex: 1;
+    min-width: 320px;
+    background: white;
+    padding: 40px;
+    border-radius: 18px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form h2 {
+    margin-bottom: 25px;
+    color: #1b5e20;
+    text-align:center;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #c8e6c9;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 8px rgba(46,125,50,0.2);
+    outline: none;
+}
+
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg,#1b5e20,#2e7d32);
+    color: white;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    opacity: 0.9;
+}
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+
+<!-- HERO -->
+<div class="contact-hero">
+    <h2>Get in Touch With Us</h2>
+    <p>
+        We are dedicated to promoting healthy living through balanced nutrition.
+        If you have questions, feedback, or collaboration ideas, our team is here to help.
+    </p>
+</div>
+
+<div class="contact-wrapper">
+
+    <!-- LEFT SIDE INFORMATION -->
+    <div class="contact-info">
+
+        <div class="info-card">
+            <h3>Our Mission</h3>
+            <p>
+                Aarogya Aahar focuses on spreading awareness about mindful eating,
+                sustainable food habits, and maintaining a healthy lifestyle rooted in
+                traditional wisdom and modern nutrition science.
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Contact Information</h3>
+            <p>
+                Email: paraschandrawanshi649@gmail.com <br>
+                Phone: +91 6263442343 <br>
+                Location: India
+            </p>
+        </div>
+
+        <div class="info-card">
+            <h3>Working Hours</h3>
+            <p>
+                Monday – Saturday: 9:00 AM – 6:00 PM <br>
+                Sunday: Closed
+            </p>
+        </div>
+
+    </div>
+
+    <!-- RIGHT SIDE FORM -->
+    <div class="contact-form">
+        <h2>Send Us a Message</h2>
+
+        <form method="POST">
+            {% csrf_token %}       
+            
+            <label>Full Name:</label><br>
+            <input type="text" name="name" required><br><br>
+                
+            <label>Email:</label><br>
+            <input type="email" name="email" required><br><br>
+                
+            <label>Subject:</label><br>
+            <input type="text" name="subject" required><br><br>
+                
+            <label>Message:</label><br>
+            <textarea name="message" rows="4" required></textarea><br><br>
+                
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
