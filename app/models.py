@@ -13,3 +13,9 @@ class cont(models.Model):
     def __str__(self):
         return self.name
     
+class signn(models.Model):
+    username=models.CharField(max_length=50)
+    email=models.EmailField()
+    password1=models.CharField(max_length=50)
+    password2=models.CharField(max_length=50)    
+        

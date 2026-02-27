@@ -24,6 +24,9 @@ urlpatterns = [
     path('recipes/',views.recipes,name='recipes'),
     path('bmi/',views.bmi,name='bmi'),
     path('contact/',views.contact,name='contact'),
+    path('login/',views.login,name='login'),
+    
+    
     
     # adminpanel
     
