@@ -24,13 +24,19 @@ urlpatterns = [
     path('recipes/',views.recipes,name='recipes'),
     path('bmi/',views.bmi,name='bmi'),
     path('contact/',views.contact,name='contact'),
-    path('login/',views.login,name='login'),
+    path('sign/',views.sign,name='sign'),
+    path('logout/',views.logout,name='logout'),
     
     
     
     # adminpanel
     
     path('adminpanel/',views.adminpanel,name='adminpanel'),
+    
+    # userpanel
+    
+    path('userpanel/',views.userpanel,name='userpanel'),
+    
     
     
     
