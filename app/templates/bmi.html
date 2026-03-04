@@ -61,6 +61,14 @@
     margin-bottom: 20px;
 }
 
+/* ===== EXTRA INFO ===== */
+.extra-info {
+    background: #f1f8e9;
+    padding: 20px;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
 /* ===== TABLE ===== */
 .bmi-table {
     width: 100%;
@@ -126,6 +134,26 @@
     padding-bottom: 15px;
 }
 
+/* ===== CTA ===== */
+.cta-section {
+    background: linear-gradient(120deg,#1b5e20,#43a047);
+    color: white;
+    padding: 40px;
+    border-radius: 18px;
+    text-align: center;
+}
+
+.cta-section button {
+    margin-top: 15px;
+    padding: 12px 30px;
+    background: white;
+    color: #1b5e20;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
 </style>
 {% endblock %}
 
@@ -138,42 +166,8 @@
         <h2>Understanding Body Mass Index</h2>
         <p>
             Body Mass Index (BMI) is a simple calculation using your height and weight 
-            to estimate body fat. It helps determine whether your weight falls within 
-            a healthy range.
+            to estimate body fat and evaluate whether your weight is healthy.
         </p>
-    </div>
-
-    <!-- ACCORDION IMAGE SECTION -->
-    <div class="bmi-card">
-        <h2>Explore Health Insights</h2>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="a1">
-            <label for="a1">➤ Healthy Diet Guidance</label>
-            <div class="accordion-content">
-                <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Healthy Food">
-                <p>A balanced diet supports optimal BMI and overall wellness.</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="a2">
-            <label for="a2">➤ Workout & Fitness Plans</label>
-            <div class="accordion-content">
-                <img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1200&q=80" alt="Workout">
-                <p>Regular exercise improves metabolism and body composition.</p>
-            </div>
-        </div>
-
-        <div class="accordion-item">
-            <input type="checkbox" id="a3">
-            <label for="a3">➤ Mental & Lifestyle Balance</label>
-            <div class="accordion-content">
-                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=1200&q=80" alt="Meditation">
-                <p>Stress management plays a vital role in maintaining a healthy weight.</p>
-            </div>
-        </div>
-
     </div>
 
     <!-- FORM SECTION -->
@@ -184,6 +178,20 @@
         <div class="result-box">
             <strong>Your BMI:</strong> {{ result }} <br>
             <strong>Category:</strong> {{ category }}
+        </div>
+
+        <div class="extra-info">
+            <h4>Health Recommendation:</h4>
+
+            {% if category == "Underweight" %}
+                <p>Increase calorie intake with healthy foods and start strength training.</p>
+            {% elif category == "Normal" %}
+                <p>Maintain your balanced diet and stay physically active.</p>
+            {% elif category == "Overweight" %}
+                <p>Focus on portion control, cardio workouts and reduce sugar intake.</p>
+            {% elif category == "Obese" %}
+                <p>Consult a doctor and follow a structured diet & fitness plan.</p>
+            {% endif %}
         </div>
         {% endif %}
 
@@ -197,6 +205,13 @@
 
             <button type="submit">Calculate BMI</button>
         </form>
+    </div>
+
+    <!-- BMI FORMULA -->
+    <div class="bmi-card">
+        <h2>BMI Formula</h2>
+        <p><strong>BMI = Weight (kg) ÷ Height² (m²)</strong></p>
+        <p>Example: 70 ÷ (1.75 × 1.75) = 22.86</p>
     </div>
 
     <!-- TABLE -->
@@ -230,6 +245,13 @@
                 <td>High risk</td>
             </tr>
         </table>
+    </div>
+
+    <!-- CTA -->
+    <div class="cta-section">
+        <h3>Start Your Healthy Journey Today 💚</h3>
+        <p>Balanced nutrition and regular exercise are the keys to long-term wellness.</p>
+        <button>Explore Healthy Recipes</button>
     </div>
 
 </div>
