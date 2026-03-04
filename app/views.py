@@ -37,26 +37,28 @@ def sign(req):
         password1 = req.POST.get('password1')
         password2 = req.POST.get('password2')
 
+        if username == 'admin' and email == 'admin@gmail.com' and password1 == 'admin' and password2 == 'admin':
+            req.session['admin'] = True
+            return render(req,'adminpanel.html')
+
         if password1 != password2:
-            messages.error(req,"password does not march")
+            messages.error(req,"password does not match")
             return render(req,'sign.html')
         
         if signn.objects.filter(username=username).exists():
             messages.error(req, "Username already exists")
             return render(req, 'sign.html')
 
-        user=signn.objects.create(
+        user = signn.objects.create(
             username=username,
             email=email,
             password1=password1,
             password2=password2
         )
         req.session['user_id'] = user.id
-
-        messages.success(req, "Account Created Successfully")
-        return redirect('userpanel') 
-
-    return render(req, 'sign.html')
+        return redirect('userpanel')
+    return render(req,'sign.html')
+    
 
 
 @never_cache

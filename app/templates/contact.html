@@ -9,7 +9,7 @@
 .contact-hero {
     background: linear-gradient(120deg, #1b5e20, #43a047);
     color: white;
-    padding: 70px 40px;
+    padding: 80px 40px;
     border-radius: 18px;
     text-align: center;
     margin-bottom: 60px;
@@ -17,9 +17,8 @@
 }
 
 .contact-hero h2 {
-    font-size: 38px;
+    font-size: 40px;
     margin-bottom: 15px;
-    letter-spacing: 1px;
 }
 
 .contact-hero p {
@@ -108,13 +107,66 @@
     background: linear-gradient(90deg,#1b5e20,#2e7d32);
     color: white;
     font-size: 15px;
-    letter-spacing: 0.5px;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .contact-form button:hover {
     opacity: 0.9;
+}
+
+/* ===== SOCIAL SECTION ===== */
+.social-section {
+    text-align:center;
+    margin:70px 0 40px 0;
+}
+
+.social-section h3 {
+    color:#1b5e20;
+    margin-bottom:15px;
+}
+
+.social-icons a {
+    text-decoration:none;
+    margin:0 10px;
+    font-size:20px;
+    color:#2e7d32;
+    font-weight:bold;
+}
+
+/* ===== MAP ===== */
+.map-section {
+    margin-top:50px;
+}
+
+.map-section iframe {
+    width:100%;
+    height:300px;
+    border-radius:15px;
+}
+
+/* ===== FAQ ===== */
+.faq-section {
+    margin:70px 0;
+}
+
+.faq-section h3 {
+    text-align:center;
+    color:#1b5e20;
+    margin-bottom:30px;
+}
+
+.faq-item {
+    margin-bottom:20px;
+}
+
+.faq-item h4 {
+    color:#2e7d32;
+}
+
+.faq-item p {
+    font-size:14px;
+    color:#555;
 }
 
 </style>
@@ -170,24 +222,45 @@
         <h2>Send Us a Message</h2>
 
         <form method="POST">
-            {% csrf_token %}       
-            
-            <label>Full Name:</label><br>
-            <input type="text" name="name" required><br><br>
-                
-            <label>Email:</label><br>
-            <input type="email" name="email" required><br><br>
-                
-            <label>Subject:</label><br>
-            <input type="text" name="subject" required><br><br>
-                
-            <label>Message:</label><br>
-            <textarea name="message" rows="4" required></textarea><br><br>
-                
-            <button type="submit">Submit</button>
+            {% csrf_token %}
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <input type="text" name="subject" placeholder="Subject" required>
+            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit Message</button>
         </form>
     </div>
 
+</div>
+
+<!-- SOCIAL -->
+<div class="social-section">
+    <h3>Connect With Us</h3>
+    <div class="social-icons">
+        <a href="#">Instagram</a>
+        <a href="#">Facebook</a>
+        <a href="#">YouTube</a>
+    </div>
+</div>
+
+<!-- MAP -->
+<div class="map-section">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
+</div>
+
+<!-- FAQ -->
+<div class="faq-section">
+    <h3>Frequently Asked Questions</h3>
+
+    <div class="faq-item">
+        <h4>How soon will I get a response?</h4>
+        <p>We usually respond within 24 hours during working days.</p>
+    </div>
+
+    <div class="faq-item">
+        <h4>Do you offer personalized diet plans?</h4>
+        <p>Yes, we are working on customized meal planning services.</p>
+    </div>
 </div>
 
 {% endblock %}
