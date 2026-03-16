@@ -88,15 +88,6 @@
     margin-bottom: 18px;
     border-radius: 10px;
     border: 1px solid #c8e6c9;
-    font-size: 14px;
-    transition: 0.3s;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    border-color: #2e7d32;
-    box-shadow: 0 0 8px rgba(46,125,50,0.2);
-    outline: none;
 }
 
 .contact-form button {
@@ -106,13 +97,7 @@
     border: none;
     background: linear-gradient(90deg,#1b5e20,#2e7d32);
     color: white;
-    font-size: 15px;
     cursor: pointer;
-    transition: 0.3s;
-}
-
-.contact-form button:hover {
-    opacity: 0.9;
 }
 
 /* ===== SOCIAL SECTION ===== */
@@ -169,98 +154,237 @@
     color:#555;
 }
 
+/* ===== WHY US ===== */
+.why-section{
+    margin:80px 0;
+}
+
+.why-section h3{
+    text-align:center;
+    color:#1b5e20;
+    margin-bottom:40px;
+}
+
+.why-grid{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.why-card{
+    flex:1;
+    min-width:250px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial-section{
+    margin:80px 0;
+}
+
+.testimonial-section h3{
+    text-align:center;
+    color:#1b5e20;
+    margin-bottom:40px;
+}
+
+.testimonial-grid{
+    display:flex;
+    gap:30px;
+    flex-wrap:wrap;
+}
+
+.testimonial-card{
+    flex:1;
+    min-width:250px;
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+}
+
+/* ===== NEWSLETTER ===== */
+.newsletter{
+    background:linear-gradient(120deg,#2e7d32,#66bb6a);
+    padding:50px;
+    border-radius:18px;
+    text-align:center;
+    color:white;
+    margin:70px 0;
+}
+
+.newsletter input{
+    padding:12px;
+    width:250px;
+    border:none;
+    border-radius:8px;
+    margin-right:10px;
+}
+
+.newsletter button{
+    padding:12px 20px;
+    border:none;
+    border-radius:8px;
+    background:#1b5e20;
+    color:white;
+}
+
 </style>
 {% endblock %}
 
-
 {% block content %}
 
-<!-- HERO -->
 <div class="contact-hero">
-    <h2>Get in Touch With Us</h2>
-    <p>
-        We are dedicated to promoting healthy living through balanced nutrition.
-        If you have questions, feedback, or collaboration ideas, our team is here to help.
-    </p>
+<h2>Get in Touch With Us</h2>
+<p>
+We are dedicated to promoting healthy living through balanced nutrition.
+If you have questions, feedback, or collaboration ideas, our team is here to help.
+</p>
 </div>
 
 <div class="contact-wrapper">
 
-    <!-- LEFT SIDE INFORMATION -->
-    <div class="contact-info">
+<div class="contact-info">
 
-        <div class="info-card">
-            <h3>Our Mission</h3>
-            <p>
-                Aarogya Aahar focuses on spreading awareness about mindful eating,
-                sustainable food habits, and maintaining a healthy lifestyle rooted in
-                traditional wisdom and modern nutrition science.
-            </p>
-        </div>
+<div class="info-card">
+<h3>Our Mission</h3>
+<p>
+Aarogya Aahar focuses on spreading awareness about mindful eating,
+sustainable food habits, and maintaining a healthy lifestyle.
+</p>
+</div>
 
-        <div class="info-card">
-            <h3>Contact Information</h3>
-            <p>
-                Email: paraschandrawanshi649@gmail.com <br>
-                Phone: +91 6263442343 <br>
-                Location: India
-            </p>
-        </div>
+<div class="info-card">
+<h3>Contact Information</h3>
+<p>
+Email: paraschandrawanshi649@gmail.com <br>
+Phone: +91 6263442343 <br>
+Location: India
+</p>
+</div>
 
-        <div class="info-card">
-            <h3>Working Hours</h3>
-            <p>
-                Monday – Saturday: 9:00 AM – 6:00 PM <br>
-                Sunday: Closed
-            </p>
-        </div>
-
-    </div>
-
-    <!-- RIGHT SIDE FORM -->
-    <div class="contact-form">
-        <h2>Send Us a Message</h2>
-
-        <form method="POST">
-            {% csrf_token %}
-            <input type="text" name="name" placeholder="Full Name" required>
-            <input type="email" name="email" placeholder="Email Address" required>
-            <input type="text" name="subject" placeholder="Subject" required>
-            <textarea name="message" rows="4" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit Message</button>
-        </form>
-    </div>
+<div class="info-card">
+<h3>Working Hours</h3>
+<p>
+Monday – Saturday: 9:00 AM – 6:00 PM <br>
+Sunday: Closed
+</p>
+</div>
 
 </div>
 
-<!-- SOCIAL -->
+<div class="contact-form">
+<h2>Send Us a Message</h2>
+
+<form method="POST">
+{% csrf_token %}
+<input type="text" name="name" placeholder="Full Name" required>
+<input type="email" name="email" placeholder="Email Address" required>
+<input type="text" name="subject" placeholder="Subject" required>
+<textarea name="message" rows="4" placeholder="Your Message" required></textarea>
+<button type="submit">Submit Message</button>
+</form>
+
+</div>
+
+</div>
+
 <div class="social-section">
-    <h3>Connect With Us</h3>
-    <div class="social-icons">
-        <a href="#">Instagram</a>
-        <a href="#">Facebook</a>
-        <a href="#">YouTube</a>
-    </div>
+<h3>Connect With Us</h3>
+<div class="social-icons">
+<a href="#">Instagram</a>
+<a href="#">Facebook</a>
+<a href="#">YouTube</a>
+</div>
 </div>
 
-<!-- MAP -->
 <div class="map-section">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18..." allowfullscreen></iframe>
+<iframe src="https://www.google.com/maps?q=india&output=embed"></iframe>
 </div>
 
-<!-- FAQ -->
 <div class="faq-section">
-    <h3>Frequently Asked Questions</h3>
 
-    <div class="faq-item">
-        <h4>How soon will I get a response?</h4>
-        <p>We usually respond within 24 hours during working days.</p>
-    </div>
+<h3>Frequently Asked Questions</h3>
 
-    <div class="faq-item">
-        <h4>Do you offer personalized diet plans?</h4>
-        <p>Yes, we are working on customized meal planning services.</p>
-    </div>
+<div class="faq-item">
+<h4>How soon will I get a response?</h4>
+<p>We usually respond within 24 hours during working days.</p>
+</div>
+
+<div class="faq-item">
+<h4>Do you offer personalized diet plans?</h4>
+<p>Yes, we are working on customized meal planning services.</p>
+</div>
+
+</div>
+
+
+<!-- WHY US -->
+<div class="why-section">
+
+<h3>Why Choose Aarogya Aahar</h3>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h4>Natural Nutrition</h4>
+<p>We promote balanced meals inspired by traditional Indian diets.</p>
+</div>
+
+<div class="why-card">
+<h4>Healthy Lifestyle</h4>
+<p>Our platform encourages mindful eating habits and daily wellness.</p>
+</div>
+
+<div class="why-card">
+<h4>Trusted Guidance</h4>
+<p>All our guides are based on modern nutrition research.</p>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TESTIMONIAL -->
+<div class="testimonial-section">
+
+<h3>What People Say</h3>
+
+<div class="testimonial-grid">
+
+<div class="testimonial-card">
+<p>Aarogya Aahar helped improve my diet routine.</p>
+<h5>Rahul Sharma</h5>
+</div>
+
+<div class="testimonial-card">
+<p>The healthy tips are simple and practical.</p>
+<h5>Priya Verma</h5>
+</div>
+
+<div class="testimonial-card">
+<p>Great platform for learning about healthy eating.</p>
+<h5>Amit Patel</h5>
+</div>
+
+</div>
+
+</div>
+
+
+<!-- NEWSLETTER -->
+<div class="newsletter">
+
+<h3>Subscribe for Healthy Tips</h3>
+<p>Get weekly nutrition tips and healthy recipes.</p>
+
+<input type="email" placeholder="Enter your email">
+<button>Subscribe</button>
+
 </div>
 
 {% endblock %}
