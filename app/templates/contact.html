@@ -12,12 +12,15 @@
 }
 
 body{
-    background:linear-gradient(to bottom,#f5fff7,#ecfff1);
+    background:
+    radial-gradient(circle at top left,#dcfce7 0%,transparent 25%),
+    linear-gradient(to bottom,#f5fff7,#ecfff1);
     font-family:'Poppins',sans-serif;
     color:#1f2937;
 }
 
 /* ===== MAIN CONTAINER ===== */
+
 .contact-container{
     max-width:1200px;
     margin:40px auto;
@@ -25,58 +28,49 @@ body{
 }
 
 /* ===== HERO ===== */
+
 .contact-hero{
-    background:linear-gradient(135deg,#052e16,#166534);
+    background:linear-gradient(135deg,#14532d,#166534);
     color:white;
-    padding:90px 40px;
-    border-radius:35px;
+    padding:75px 40px;
+    border-radius:30px;
     text-align:center;
     position:relative;
     overflow:hidden;
-    margin-bottom:60px;
-    box-shadow:0 20px 50px rgba(0,0,0,0.1);
+    margin-bottom:55px;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
 }
 
 .contact-hero::before{
     content:'';
     position:absolute;
-    width:320px;
-    height:320px;
+    width:260px;
+    height:260px;
     background:rgba(255,255,255,0.05);
     border-radius:50%;
     top:-100px;
-    right:-100px;
-}
-
-.contact-hero::after{
-    content:'';
-    position:absolute;
-    width:220px;
-    height:220px;
-    background:rgba(255,255,255,0.05);
-    border-radius:50%;
-    bottom:-70px;
-    left:-70px;
+    right:-80px;
 }
 
 .contact-hero h2{
-    font-size:55px;
-    margin-bottom:18px;
+    font-size:48px;
+    margin-bottom:15px;
     position:relative;
     z-index:2;
 }
 
 .contact-hero p{
-    max-width:760px;
+    max-width:650px;
     margin:auto;
-    line-height:1.9;
-    color:#d1fae5;
+    line-height:1.8;
+    color:#dcfce7;
     position:relative;
     z-index:2;
-    font-size:17px;
+    font-size:16px;
 }
 
 /* ===== CONTACT WRAPPER ===== */
+
 .contact-wrapper{
     display:grid;
     grid-template-columns:1fr 1.1fr;
@@ -85,6 +79,7 @@ body{
 }
 
 /* ===== INFO SECTION ===== */
+
 .contact-info{
     display:flex;
     flex-direction:column;
@@ -92,29 +87,30 @@ body{
 }
 
 .info-card{
-    background:rgba(255,255,255,0.85);
+    background:rgba(255,255,255,0.9);
     backdrop-filter:blur(10px);
-    border:1px solid rgba(255,255,255,0.5);
+    border:1px solid #ecfdf5;
     padding:30px;
-    border-radius:28px;
-    box-shadow:0 12px 35px rgba(0,0,0,0.06);
+    border-radius:26px;
+    box-shadow:0 12px 35px rgba(0,0,0,0.05);
     transition:0.3s;
 }
 
 .info-card:hover{
-    transform:translateY(-6px);
+    transform:translateY(-5px);
+    box-shadow:0 18px 35px rgba(0,0,0,0.08);
 }
 
 .info-card h3{
     color:#166534;
     margin-bottom:14px;
-    font-size:26px;
+    font-size:25px;
     position:relative;
 }
 
 .info-card h3::after{
     content:'';
-    width:55px;
+    width:50px;
     height:4px;
     background:#22c55e;
     position:absolute;
@@ -130,19 +126,21 @@ body{
 }
 
 /* ===== FORM ===== */
+
 .contact-form{
-    background:rgba(255,255,255,0.9);
+    background:rgba(255,255,255,0.95);
     backdrop-filter:blur(10px);
     border-radius:30px;
     padding:45px;
-    box-shadow:0 15px 40px rgba(0,0,0,0.07);
+    box-shadow:0 15px 40px rgba(0,0,0,0.06);
+    border:1px solid #ecfdf5;
 }
 
 .contact-form h2{
     text-align:center;
     margin-bottom:30px;
     color:#166534;
-    font-size:38px;
+    font-size:36px;
 }
 
 .contact-form form{
@@ -154,11 +152,11 @@ body{
 .contact-form input,
 .contact-form textarea{
     width:100%;
-    padding:16px;
+    padding:17px;
     border:none;
-    border-radius:16px;
-    background:#f8faf8;
-    box-shadow:inset 0 0 0 1px #d1d5db;
+    border-radius:14px;
+    background:#f9fbf9;
+    border:1px solid #e5e7eb;
     font-size:15px;
     transition:0.3s;
 }
@@ -167,7 +165,8 @@ body{
 .contact-form textarea:focus{
     outline:none;
     background:white;
-    box-shadow:0 0 0 4px rgba(34,197,94,0.15);
+    border-color:#22c55e;
+    box-shadow:0 0 0 4px rgba(34,197,94,0.12);
 }
 
 .contact-form textarea{
@@ -177,10 +176,10 @@ body{
 .contact-form button{
     padding:16px;
     border:none;
-    border-radius:16px;
+    border-radius:14px;
     background:linear-gradient(90deg,#16a34a,#22c55e);
     color:white;
-    font-size:17px;
+    font-size:16px;
     cursor:pointer;
     transition:0.3s;
     font-weight:600;
@@ -188,17 +187,18 @@ body{
 
 .contact-form button:hover{
     transform:translateY(-3px);
-    box-shadow:0 10px 25px rgba(34,197,94,0.3);
+    box-shadow:0 12px 24px rgba(34,197,94,0.25);
 }
 
 /* ===== SOCIAL ===== */
+
 .social-section{
     text-align:center;
     margin:80px 0 50px;
 }
 
 .social-section h3{
-    font-size:35px;
+    font-size:34px;
     color:#166534;
     margin-bottom:25px;
 }
@@ -213,11 +213,12 @@ body{
 .social-icons a{
     text-decoration:none;
     background:white;
-    padding:16px 28px;
+    padding:15px 26px;
     border-radius:50px;
     color:#166534;
     font-weight:600;
-    box-shadow:0 8px 20px rgba(0,0,0,0.06);
+    border:1px solid #dcfce7;
+    box-shadow:0 8px 18px rgba(0,0,0,0.05);
     transition:0.3s;
 }
 
@@ -228,6 +229,7 @@ body{
 }
 
 /* ===== MAP ===== */
+
 .map-section{
     margin-top:60px;
 }
@@ -241,6 +243,7 @@ body{
 }
 
 /* ===== FAQ ===== */
+
 .faq-section{
     margin:90px 0;
 }
@@ -248,7 +251,7 @@ body{
 .faq-section h3{
     text-align:center;
     color:#166534;
-    font-size:40px;
+    font-size:38px;
     margin-bottom:40px;
 }
 
@@ -271,13 +274,14 @@ body{
 }
 
 /* ===== WHY SECTION ===== */
+
 .why-section{
     margin:90px 0;
 }
 
 .why-section h3{
     text-align:center;
-    font-size:40px;
+    font-size:38px;
     color:#166534;
     margin-bottom:45px;
 }
@@ -294,6 +298,7 @@ body{
     border-radius:25px;
     box-shadow:0 10px 30px rgba(0,0,0,0.05);
     transition:0.3s;
+    border:1px solid #ecfdf5;
 }
 
 .why-card:hover{
@@ -312,6 +317,7 @@ body{
 }
 
 /* ===== TESTIMONIAL ===== */
+
 .testimonial-section{
     margin:90px 0;
 }
@@ -319,7 +325,7 @@ body{
 .testimonial-section h3{
     text-align:center;
     color:#166534;
-    font-size:40px;
+    font-size:38px;
     margin-bottom:45px;
 }
 
@@ -335,6 +341,17 @@ body{
     border-radius:25px;
     box-shadow:0 10px 30px rgba(0,0,0,0.05);
     transition:0.3s;
+    position:relative;
+    overflow:hidden;
+}
+
+.testimonial-card::before{
+    content:'❝';
+    position:absolute;
+    top:10px;
+    right:20px;
+    font-size:70px;
+    color:#dcfce7;
 }
 
 .testimonial-card:hover{
@@ -345,16 +362,21 @@ body{
     color:#555;
     line-height:1.8;
     margin-bottom:18px;
+    position:relative;
+    z-index:2;
 }
 
 .testimonial-card h5{
     color:#15803d;
     font-size:16px;
+    position:relative;
+    z-index:2;
 }
 
 /* ===== NEWSLETTER ===== */
+
 .newsletter{
-    background:linear-gradient(135deg,#052e16,#166534);
+    background:linear-gradient(135deg,#14532d,#166534);
     padding:70px 35px;
     border-radius:35px;
     text-align:center;
@@ -376,7 +398,7 @@ body{
 }
 
 .newsletter h3{
-    font-size:42px;
+    font-size:40px;
     margin-bottom:15px;
     position:relative;
     z-index:2;
@@ -422,6 +444,7 @@ body{
 }
 
 /* ===== RESPONSIVE ===== */
+
 @media(max-width:900px){
 
     .contact-wrapper{
@@ -441,7 +464,7 @@ body{
 @media(max-width:600px){
 
     .contact-hero{
-        padding:70px 25px;
+        padding:65px 25px;
     }
 
     .contact-hero h2{
@@ -471,6 +494,7 @@ body{
     <!-- HERO -->
     <div class="contact-hero">
         <h2>Get In Touch With Us</h2>
+
         <p>
             We are dedicated to promoting healthy living through balanced nutrition,
             mindful eating and sustainable wellness habits.
@@ -485,6 +509,7 @@ body{
 
             <div class="info-card">
                 <h3>🌿 Our Mission</h3>
+
                 <p>
                     Aarogya Aahar focuses on spreading awareness about
                     healthy eating, natural nutrition and better lifestyle habits.
@@ -493,17 +518,22 @@ body{
 
             <div class="info-card">
                 <h3>📞 Contact Information</h3>
+
                 <p>
                     Email: paraschandrawanshi649@gmail.com <br><br>
+
                     Phone: +91 6263442343 <br><br>
+
                     Location: India
                 </p>
             </div>
 
             <div class="info-card">
                 <h3>⏰ Working Hours</h3>
+
                 <p>
                     Monday – Saturday: 9:00 AM – 6:00 PM <br><br>
+
                     Sunday: Closed
                 </p>
             </div>
@@ -559,6 +589,7 @@ body{
 
         <div class="faq-item">
             <h4>How soon will I get a response?</h4>
+
             <p>
                 We usually respond within 24 hours during working days.
             </p>
@@ -566,6 +597,7 @@ body{
 
         <div class="faq-item">
             <h4>Do you offer personalized diet plans?</h4>
+
             <p>
                 Yes, we are working on customized meal planning services.
             </p>
@@ -582,6 +614,7 @@ body{
 
             <div class="why-card">
                 <h4>🥗 Natural Nutrition</h4>
+
                 <p>
                     Balanced meals inspired by traditional Indian diets.
                 </p>
@@ -589,6 +622,7 @@ body{
 
             <div class="why-card">
                 <h4>💪 Healthy Lifestyle</h4>
+
                 <p>
                     Encouraging mindful eating and better wellness habits.
                 </p>
@@ -596,6 +630,7 @@ body{
 
             <div class="why-card">
                 <h4>📚 Trusted Guidance</h4>
+
                 <p>
                     Nutrition tips backed by modern research and healthy practices.
                 </p>
@@ -616,6 +651,7 @@ body{
                 <p>
                     “Aarogya Aahar helped improve my diet routine and daily habits.”
                 </p>
+
                 <h5>— Rahul Sharma</h5>
             </div>
 
@@ -623,6 +659,7 @@ body{
                 <p>
                     “The healthy tips are simple, practical and easy to follow.”
                 </p>
+
                 <h5>— Priya Verma</h5>
             </div>
 
@@ -630,6 +667,7 @@ body{
                 <p>
                     “Great platform for learning healthy eating and wellness.”
                 </p>
+
                 <h5>— Amit Patel</h5>
             </div>
 
@@ -648,6 +686,7 @@ body{
 
         <form>
             <input type="email" placeholder="Enter your email">
+
             <button>Subscribe</button>
         </form>
 
