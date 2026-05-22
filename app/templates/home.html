@@ -27,16 +27,8 @@ body{
     padding: 20px;
 }
 
-.hero h1 {
-    font-size: 48px;
-    font-weight: bold;
-}
-
-.hero p {
-    font-size: 18px;
-    margin: 15px 0 25px;
-    max-width: 600px;
-}
+.hero h1 { font-size: 48px; font-weight: bold; }
+.hero p { font-size: 18px; margin: 15px 0 25px; max-width: 600px; }
 
 .hero a {
     background: white;
@@ -47,11 +39,7 @@ body{
     font-weight: bold;
     transition: 0.3s;
 }
-
-.hero a:hover {
-    background: #c8e6c9;
-    transform: scale(1.05);
-}
+.hero a:hover { background: #c8e6c9; transform: scale(1.05); }
 
 /* ===== FEATURES ===== */
 .features {
@@ -71,14 +59,30 @@ body{
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
+.feature-box:hover { transform: translateY(-5px); }
+.feature-box h3 { color: #1b5e20; }
 
-.feature-box:hover {
-    transform: translateY(-5px);
+/* ===== STATS ===== */
+.stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    margin: 60px 20px;
+    text-align: center;
 }
 
-.feature-box h3 {
-    margin-bottom: 10px;
-    color: #1b5e20;
+.stat-box {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    width: 200px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.stat-box h2 {
+    color: #2e7d32;
+    font-size: 28px;
 }
 
 /* ===== FOOD SECTION ===== */
@@ -108,10 +112,7 @@ body{
     box-shadow: 0 8px 20px rgba(0,0,0,0.08);
     transition: 0.3s;
 }
-
-.food-card:hover {
-    transform: scale(1.03);
-}
+.food-card:hover { transform: scale(1.03); }
 
 .food-card img {
     width: 100%;
@@ -119,13 +120,29 @@ body{
     object-fit: cover;
 }
 
-.food-card .info {
-    padding: 18px;
+.food-card .info { padding: 18px; }
+.food-card h4 { color: #2e7d32; }
+
+/* ===== TESTIMONIALS ===== */
+.testimonials {
+    text-align: center;
+    margin: 70px 20px;
 }
 
-.food-card h4 {
-    color: #2e7d32;
-    margin-bottom: 8px;
+.testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.testimonial {
+    width: 280px;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    font-style: italic;
 }
 
 /* ===== CTA ===== */
@@ -148,18 +165,22 @@ body{
     margin-top: 20px;
     transition: 0.3s;
 }
+.cta a:hover { background: #c8e6c9; transform: scale(1.05); }
 
-.cta a:hover {
-    background: #c8e6c9;
-    transform: scale(1.05);
+/* ===== FOOTER ===== */
+.footer {
+    background: #1b5e20;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    margin-top: 50px;
 }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
     .hero h1 { font-size: 34px; }
     .hero p { font-size: 16px; }
-
-    .feature-box, .food-card {
+    .feature-box, .food-card, .stat-box {
         width: 90%;
     }
 }
@@ -191,6 +212,22 @@ body{
     <div class="feature-box">
         <h3>💚 Lifestyle Tips</h3>
         <p>Daily habits and food suggestions for better living.</p>
+    </div>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+    <div class="stat-box">
+        <h2>120+</h2>
+        <p>Healthy Recipes</p>
+    </div>
+    <div class="stat-box">
+        <h2>10K+</h2>
+        <p>Users Joined</p>
+    </div>
+    <div class="stat-box">
+        <h2>50+</h2>
+        <p>Nutrition Tips</p>
     </div>
 </div>
 
@@ -227,11 +264,33 @@ body{
     </div>
 </div>
 
+<!-- TESTIMONIALS -->
+<div class="testimonials">
+    <h2>What People Say 💬</h2>
+
+    <div class="testimonial-grid">
+        <div class="testimonial">
+            “This platform completely changed my eating habits. Very useful!”
+        </div>
+        <div class="testimonial">
+            “BMI calculator and recipes are super easy to use.”
+        </div>
+        <div class="testimonial">
+            “Best guide for a healthy lifestyle. Simple and effective.”
+        </div>
+    </div>
+</div>
+
 <!-- CTA -->
 <div class="cta">
     <h2>Start Your Healthy Journey Today 🌿</h2>
     <p>Join us and transform your lifestyle.</p>
     <a href="/register/">Get Started</a>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    <p>© 2026 आरोग्य आहार | Built for Healthy Living</p>
 </div>
 
 {% endblock %}
